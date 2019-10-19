@@ -1,10 +1,11 @@
 {
-  "name": "reactjson",
+  "name": "react-json",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "react-reconciler": "^0.22.2",
     "react-scripts": "3.2.0"
   },
   "scripts": {
