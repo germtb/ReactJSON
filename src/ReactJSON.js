@@ -1,4 +1,4 @@
-import Reconciler from "react-reconciler";
+const Reconciler = require("react-reconciler");
 
 const createHostConfig = () => ({
   now: Date.now,
@@ -100,4 +100,4 @@ const ReactJSON = {
   }
 };
 
-export default ReactJSON;
+module.exports = ReactJSON;
