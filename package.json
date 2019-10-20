@@ -1,5 +1,5 @@
 {
-  "name": "reactjson",
+  "name": "@germtf/react-json",
   "version": "0.1.0",
   "main": "./dist/index.js",
   "dependencies": {
