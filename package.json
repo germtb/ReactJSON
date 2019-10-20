@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "main": "./dist/index.js",
   "dependencies": {
-    "react": "^16.10.2",
     "react-reconciler": "^0.22.2"
+  },
+  "peerDependencies": {
+    "react": "^16.10.2"
   },
   "scripts": {
     "build": "./node_modules/parcel-bundler/bin/cli.js build ./src/index.js"
