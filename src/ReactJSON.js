@@ -1,4 +1,4 @@
-const Reconciler = require("react-reconciler");
+import Reconciler from "react-reconciler";
 
 const createHostConfig = () => ({
   now: Date.now,
