@@ -3,21 +3,18 @@
   "version": "0.1.4",
   "main": "./src/index.js",
   "dependencies": {
-    "react-reconciler": "^0.22.2"
-  },
-  "peerDependencies": {
+    "react-reconciler": "^0.22.2",
     "react": "^16.10.2"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "babel": {
-    "presets": [
-      "react-app"
-    ]
+    "presets": []
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
+    "@babel/runtime": "^7.6.3",
     "babel-preset-react-app": "^9.0.2",
     "parcel-bundler": "^1.12.4"
   }

@@ -1,6 +1,6 @@
 import Reconciler from "react-reconciler";
 
-const createHostConfig = () => ({
+const createHostConfig = callback => ({
   now: Date.now,
   getRootHostContext: () => {
     let rootContext = {};
@@ -24,7 +24,7 @@ const createHostConfig = () => ({
           acc[key] = newProps[key];
           return acc;
         },
-        { type }
+        { type, children: [] }
       );
   },
   appendChildToContainer: (parent, child) => {
@@ -57,7 +57,9 @@ const createHostConfig = () => ({
   commitTextUpdate: (textInstance, oldText, newText) => {
     textInstance.value = newText;
   },
-  commitUpdate: () => {},
+  commitUpdate: () => {
+    callback();
+  },
   appendChild: (parentInstance, child) => {
     parentInstance.children.push(child);
   },
@@ -87,7 +89,7 @@ const createHostConfig = () => ({
 const ReactJSON = {
   mount(element, renderDom, callback) {
     const isAsync = false;
-    const reconcilerInstance = Reconciler(createHostConfig());
+    const reconcilerInstance = Reconciler(createHostConfig(callback));
     const container = reconcilerInstance.createContainer(renderDom, isAsync);
 
     const parentComponent = null;
